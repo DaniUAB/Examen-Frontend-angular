@@ -1,59 +1,53 @@
-# ExamenFrontendAngular
+# Frontend Angular - Sistema de Empleados
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
+Frontend desarrollado en Angular para gestión de empleados con conexión a API Laravel.
 
-## Development server
+## 🚀 Características
 
-To start a local development server, run:
+- **Interfaz moderna y responsive** para gestión completa de empleados
+- **Formulario reactivo** para crear nuevos empleados con validación
+- **Tabla dinámica** que muestra todos los empleados registrados
+- **Comunicación HTTP** con backend Laravel mediante servicios
+- **Manejo de estados** (loading, éxito, error)
+- **Diseño profesional** con estilos CSS modernos
+
+## 📱 Funcionalidades
+
+### Gestión de Empleados
+- ✅ Listar todos los empleados
+- ✅ Crear nuevos empleados
+- ✅ Validación de formularios
+- ✅ Formateo automático de salarios
+- ✅ Actualización en tiempo real de la lista
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Angular 17+** - Framework principal
+- **TypeScript** - Lenguaje de programación
+- **RxJS** - Manejo de programación reactiva
+- **HTTP Client** - Comunicación con API
+- **CSS3** - Estilos y diseño responsive
+- **Angular Router** - Navegación SPA
+
+## 📦 Instalación y Uso
 
 ```bash
+# 1. Clonar el repositorio
+git clone https://github.com/DaniUAB/Examen-Frontend-angular.git
+cd Examen-Frontend-angular
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Ejecutar servidor de desarrollo
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+# 4. Abrir en el navegador
+# http://localhost:4200
 
-## Code scaffolding
+👨‍💻 Desarrollo
+Proyecto desarrollado para examen parcial de Tecnologías de Internet
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Estudiante: Daniel
+Materia: Tecnologías de Internet
+Fecha: Octubre 2024

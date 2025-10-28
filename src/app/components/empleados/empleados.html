@@ -1,1 +1,69 @@
-<p>empleados works!</p>
+<div class="container">
+  <h2>Gestión de Empleados</h2>
+
+  <!-- Formulario -->
+  <div class="form-container">
+    <h3>Crear Nuevo Empleado</h3>
+    <form (ngSubmit)="onSubmit()" class="empleado-form">
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="empleado.nombre" name="nombre" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Apellido:</label>
+        <input type="text" [(ngModel)]="empleado.apellido" name="apellido" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Correo:</label>
+        <input type="email" [(ngModel)]="empleado.correo" name="correo" required class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label>Salario:</label>
+        <input type="number" [(ngModel)]="empleado.salario" name="salario" required min="0" step="0.01" class="form-control">
+      </div>
+
+      <button type="submit" [disabled]="loading" class="btn btn-primary">
+        {{ loading ? 'Creando...' : 'Crear Empleado' }}
+      </button>
+    </form>
+
+    <div *ngIf="submitted" class="success-message">
+      ✅ Empleado creado exitosamente!
+    </div>
+  </div>
+
+  <!-- Lista de empleados -->
+  <div class="table-container">
+    <h3>Lista de Empleados</h3>
+
+    <div *ngIf="loadingList" class="loading">
+      Cargando empleados...
+    </div>
+
+    <div *ngIf="!loadingList && empleados.length === 0" class="no-data">
+      No hay empleados registrados.
+    </div>
+
+    <table *ngIf="!loadingList && empleados.length > 0" class="empleados-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Salario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.nombre }}</td>
+        <td>{{ emp.apellido }}</td>
+        <td>{{ emp.correo }}</td>
+        <td>{{ formatearSalario(emp.salario) }}</td>
+      </tr>
+    </tbody>
+  </table>
